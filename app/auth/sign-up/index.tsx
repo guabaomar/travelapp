@@ -72,6 +72,29 @@ import { Text, TextInput, TouchableOpacity, View } from 'react-native';
         >Create Your Accout Now!</Text>
 
 
+
+ <View style={{ marginTop: 30 }}>
+            <Text>
+
+              Full Name:
+            </Text>
+           
+             <TextInput 
+             placeholder='Enter your full name'
+              style={{
+                borderWidth: 1, 
+                borderColor: '#ccc',
+                padding: 10,
+                borderRadius: 5,
+              }}
+             
+             
+             >
+
+             </TextInput>
+
+
+           </View>
            <View style={{ marginTop: 30 }}>
             <Text>
 
