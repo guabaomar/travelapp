@@ -1,7 +1,11 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation, useRouter } from 'expo-router';
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { auth } from '../../../configs/FirebaseConfig'; // Adjust the import path as necessary
+
+
 
 
 
@@ -22,6 +26,23 @@ import { Text, TextInput, TouchableOpacity, View } from 'react-native';
        }, [])
     // Check if the user is already authenticated 
 
+    const createNewUser = () => {
+
+
+          createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+      // Logic to create a new user account
+    }
   
     return (
       <View  
