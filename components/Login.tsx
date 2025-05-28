@@ -1,9 +1,14 @@
-import { Image, Text, View } from 'react-native'
+import { useRouter } from 'expo-router';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 
 
 
  const Login = () => {
   
+
+   const router = useRouter();
+
+   
     return (
       <View>
         
@@ -31,7 +36,10 @@ import { Image, Text, View } from 'react-native'
             color: '#666'
           }}> Discover the world with AI. This app is what you need to achieve your entertainment goals. So what are you waiting for? Join our community of happy travelers. </Text> 
 
-            <View style={{
+            <TouchableOpacity
+            onPress={() => router.push('/auth/sign-in')}
+            
+            style={{
               marginTop: 20,
               paddingHorizontal: 20,
               paddingVertical: 10,
@@ -42,7 +50,7 @@ import { Image, Text, View } from 'react-native'
               <Text style={{ color: '#fff', fontSize: 17 }}> Get Started </Text>
 
 
-            </View>
+            </TouchableOpacity>
 
         </View>
 
